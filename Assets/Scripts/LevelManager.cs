@@ -2,6 +2,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
+    public GameObject canvasPrincipal;
+    public GameObject panelOpciones;
+
+    public void atras()
+    {
+        SceneManager.LoadScene(0);
+    }
     public void PlayGame()
     {
         SceneManager.LoadScene(1);
@@ -19,5 +26,14 @@ public class LevelManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+      public void AbrirPanel()
+    {
+        panelOpciones.SetActive(true);
+    }
+    public void CerrarPanel()
+    {
+        panelOpciones.SetActive(false);
+        canvasPrincipal.SetActive(true);
     }
 }
