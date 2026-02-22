@@ -114,4 +114,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BolitaInteract
   interactionDistance: 13
-  recogerSonido: {fileID: 0}
+  recogerSonido: {fileID: 8300000, guid: af1a2ada57693394aa61f6c09fe9377c, type: 3}

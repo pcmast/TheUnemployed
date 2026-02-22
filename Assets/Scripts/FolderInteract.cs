@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class FolderInteract : MonoBehaviour
 {
-    public float interactionDistance = 13f; // distancia para recoger
+    public float interactionDistance = 13f;
     public AudioClip recogerSonido;
     private AudioSource audioSource;
 
-    private static bool yaRecogidoEnEsteFrame = false; // evita recoger varias carpetas al mismo tiempo
+    private bool recogido = false;
 
     void Start()
     {
@@ -16,7 +16,7 @@ public class FolderInteract : MonoBehaviour
 
     void Update()
     {
-        if (yaRecogidoEnEsteFrame) return; // otra carpeta ya se recogió este frame
+        if (recogido) return;
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player == null) return;
@@ -25,20 +25,19 @@ public class FolderInteract : MonoBehaviour
 
         if (distance <= interactionDistance && Input.GetKeyDown(KeyCode.E))
         {
-            yaRecogidoEnEsteFrame = true; // bloqueamos otras carpetas este frame
             RecogerFolder();
         }
     }
 
-    void LateUpdate()
-    {
-        yaRecogidoEnEsteFrame = false; // reset para el siguiente frame
-    }
-
     public void RecogerFolder()
     {
+        if (recogido) return;
+        recogido = true;
+
         if (Inventory.instance != null)
             Inventory.instance.AddFolder();
+
+        GetComponent<Collider>().enabled = false;
 
         if (recogerSonido != null)
         {

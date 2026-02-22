@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class BolitaInteract : MonoBehaviour
 {
-    public float interactionDistance = 13f; // distancia para recoger
+    public float interactionDistance = 13f;
     public AudioClip recogerSonido;
     private AudioSource audioSource;
 
-    private static bool yaRecogidoEnEsteFrame = false; // bandera estática para evitar recoger varias
+    private bool recogido = false;
 
     void Start()
     {
@@ -16,7 +16,7 @@ public class BolitaInteract : MonoBehaviour
 
     void Update()
     {
-        if (yaRecogidoEnEsteFrame) return; // otra bolita ya se recogió en este frame
+        if (recogido) return;
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player == null) return;
@@ -25,21 +25,19 @@ public class BolitaInteract : MonoBehaviour
 
         if (distance <= interactionDistance && Input.GetKeyDown(KeyCode.E))
         {
-            yaRecogidoEnEsteFrame = true; // bloqueamos otras bolitas este frame
             RecogerBolita();
         }
     }
 
-    void LateUpdate()
-    {
-        // Reset de la bandera para el siguiente frame
-        yaRecogidoEnEsteFrame = false;
-    }
-
     public void RecogerBolita()
     {
+        if (recogido) return;
+        recogido = true;
+
         if (Inventory.instance != null)
             Inventory.instance.AddPaperBall();
+
+        GetComponent<Collider>().enabled = false;
 
         if (recogerSonido != null)
         {

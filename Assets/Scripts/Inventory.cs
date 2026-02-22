@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class Inventory : MonoBehaviour
 {
     public static Inventory instance;
@@ -8,7 +8,8 @@ public class Inventory : MonoBehaviour
     [Header("Contadores")]
     public int paperBalls = 0;
     public int folders = 0;
-
+    [Header("UI Turno terminado")]
+    public GameObject canvasTurnoTerminado;
     public TMP_Text paperBallCounter; // TextMeshPro para bolitas
     public TMP_Text folderCounter;    // TextMeshPro para folders
 
@@ -29,6 +30,19 @@ public class Inventory : MonoBehaviour
         UpdateUI();
     }
 
+    void Update()
+    {
+        if (turnoTerminado && Input.GetKeyDown(KeyCode.Tab))
+        {
+            LiberarMouse();
+            SceneManager.LoadScene(5);
+        }
+    }
+    void LiberarMouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     // Método para sumar una bolita
     public void AddPaperBall()
     {
@@ -54,8 +68,9 @@ public class Inventory : MonoBehaviour
         if (paperBalls >= bolitasParaTerminarTurno && folders >= foldersParaTerminarTurno)
         {
             turnoTerminado = true;
-            Debug.Log("¡Objetivos completados! Turno terminado.");
-            // Aquí puedes agregar lógica de fin de turno o pasar de nivel
+
+            if (canvasTurnoTerminado != null)
+                canvasTurnoTerminado.SetActive(true);
         }
     }
 

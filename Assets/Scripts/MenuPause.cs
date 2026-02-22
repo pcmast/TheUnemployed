@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class MenuPause : MonoBehaviour
 {
     public GameObject gameCanvas;   // Canvas del juego
@@ -14,10 +14,7 @@ public class MenuPause : MonoBehaviour
             if (!isPaused)
             {
                  PauseGame(); 
-            }
-              
-          
-                
+            }  
         }
     }
 
@@ -32,6 +29,10 @@ public class MenuPause : MonoBehaviour
         Cursor.visible = true;
 
         isPaused = true;
+    }
+    public void volverMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void ResumeGame()
