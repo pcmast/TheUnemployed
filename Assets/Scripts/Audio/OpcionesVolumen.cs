@@ -1,29 +1,27 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 public class OpcionesVolumen : MonoBehaviour
 {
-    public AudioMixer mixer;
+
+    public AudioSource[] musicSources;
+    public Slider slider;
+
+    void Start()
+    {
+        slider.minValue = 0f;
+        slider.maxValue = 1f;
+        if (musicSources.Length > 0) slider.value = musicSources[0].volume;
+
+        slider.onValueChanged.AddListener(SetMusicVolume);
+    }
 
     public void SetMusicVolume(float value)
     {
-        // Convertimos de lineal (0 a 1) a decibelios
-        mixer.SetFloat("Musica", Mathf.Log10(value) * 20);
-        PlayerPrefs.SetFloat("VolumenMúsica", value);
-    }
-
-    public void SetSFXVolume(float value)
-    {
-        mixer.SetFloat("Musica", Mathf.Log10(value) * 20);
-        PlayerPrefs.SetFloat("Musica", value);
-    }
-
-    // Cargar valores guardados
-    void Start()
-    {
-        float musicVol = PlayerPrefs.GetFloat("Musica", 1f);
-        float sfxVol = PlayerPrefs.GetFloat("Musica", 1f);
-
-        SetMusicVolume(musicVol);
-        SetSFXVolume(sfxVol);
+        foreach (var source in musicSources)
+        {
+            source.volume = value;
+        }
+        Debug.Log("Volumen actual para todos: " + value);
     }
 }

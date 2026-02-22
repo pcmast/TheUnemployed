@@ -548,6 +548,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 903601633}
   m_SourcePrefab: {fileID: 100100000, guid: 1fd4453a3873d8b41978a40802932a35, type: 3}
+--- !u!82 &401267832 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3147520634032064633, guid: 5d9d953514cb9cb419c7eaddb71cccc0, type: 3}
+  m_PrefabInstance: {fileID: 992331942108045729}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &476427103 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 214f6e27250149346aadae66700e1d74, type: 3}
@@ -868,8 +873,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1409833963}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.7, y: 0}
+  m_AnchorMax: {x: 0.7, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2515,7 +2520,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b99fd5794bd1f6048b841b3138bc92fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OpcionesVolumen
-  mixer: {fileID: 24100000, guid: 48a33bc2390e3d04a878f0af3de36519, type: 2}
+  musicSources:
+  - {fileID: 401267832}
+  - {fileID: 3260658394086529193, guid: 2613440f06cda9a46bb1d258a0d14769, type: 3}
+  slider: {fileID: 476967629}
 --- !u!4 &1576231983
 Transform:
   m_ObjectHideFlags: 0
@@ -3063,7 +3071,7 @@ RectTransform:
   m_Father: {fileID: 536938528}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.7, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3902,7 +3910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6709569851355048126, guid: d668629de853d5a4b8862718abd1814f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

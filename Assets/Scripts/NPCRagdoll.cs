@@ -37,13 +37,13 @@ public class NPCRagdoll : MonoBehaviour
 
     void SetRagdoll(bool active)
     {
-        // Animator activado solo mientras est� vivo
+        // Animator activado solo mientras está vivo
         animator.enabled = !active;
 
         // Colliders del ragdoll y rigidbodies
         foreach (Rigidbody rb in ragdollRigidbodies)
         {
-            // Hacemos kinematic mientras est� vivo
+            // Hacemos kinematic mientras está vivo
             rb.isKinematic = !active;
         }
 
@@ -53,7 +53,7 @@ public class NPCRagdoll : MonoBehaviour
             col.enabled = active;
         }
 
-        // Collider principal siempre activo mientras est� vivo
+        // Collider principal siempre activo mientras está vivo
         if (!active && mainCollider != null)
             mainCollider.enabled = true;
     }
@@ -63,7 +63,7 @@ public class NPCRagdoll : MonoBehaviour
         // Desactivamos animator, activamos ragdoll
         SetRagdoll(true);
 
-        // Empujar un poco el cuerpo para que se vea m�s real
+        // Empujar un poco el cuerpo para que se vea más real
         foreach (Rigidbody rb in ragdollRigidbodies)
         {
             rb.AddForce(Vector3.forward * 2f, ForceMode.Impulse);
