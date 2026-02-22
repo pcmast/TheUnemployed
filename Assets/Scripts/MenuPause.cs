@@ -13,8 +13,8 @@ public class MenuPause : MonoBehaviour
         {
             if (!isPaused)
             {
-                 PauseGame(); 
-            }  
+                PauseGame();
+            }
         }
     }
 
@@ -32,6 +32,9 @@ public class MenuPause : MonoBehaviour
     }
     public void volverMenu()
     {
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         SceneManager.LoadScene(0);
     }
 
