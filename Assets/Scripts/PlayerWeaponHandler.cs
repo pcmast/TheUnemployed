@@ -21,6 +21,7 @@ public class PlayerWeaponHandler : MonoBehaviour
     {
         HandlePickup();
         HandleDrop();
+        HandleAttack();
     }
     void Start()
     {
@@ -79,6 +80,22 @@ public class PlayerWeaponHandler : MonoBehaviour
             currentWeapon.transform.localPosition = Vector3.zero;
             currentWeapon.transform.localRotation = Quaternion.Euler(0f, -90f, 140f); // ajusta según tu modelo
         }
+        else if (currentWeapon.name.Contains("Glock17"))
+        {
+            currentWeapon.transform.localPosition = Vector3.zero;
+            currentWeapon.transform.localRotation = Quaternion.Euler(0f, -270f, 0f); // ajusta según tu modelo
+        }
+         else
+        {
+            currentWeapon.transform.localPosition = Vector3.zero;
+            currentWeapon.transform.localRotation = Quaternion.identity;
+        }
+        SimpleGun gun = currentWeapon.GetComponent<SimpleGun>();
+        if (gun != null)
+        {
+            gun.enabled = true;
+            gun.isEquipped = true; // activa la pistola para disparar
+        }
     }
 
     void HandleDrop()
@@ -87,6 +104,12 @@ public class PlayerWeaponHandler : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.G))
         {
+            SimpleGun gun = currentWeapon.GetComponent<SimpleGun>();
+            if (gun != null)
+            {
+                gun.enabled = false;
+                gun.isEquipped = false; // desactiva disparo al soltar
+            }
             // Quitar de la mano
             currentWeapon.transform.SetParent(null);
 
@@ -107,6 +130,7 @@ public class PlayerWeaponHandler : MonoBehaviour
     void HandleAttack()
     {
         if (currentWeapon == null) return;
+        if (currentWeapon.GetComponent<SimpleGun>() != null) return;
 
         Transform hitboxTransform = currentWeapon.transform.Find("Hitbox");
         Collider hitbox = null;
