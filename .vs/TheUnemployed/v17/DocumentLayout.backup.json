@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\adamu\\Documents\\GitHub\\TheUnemployed\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A3BC4FAC-7512-EEDB-4ED0-B7FF136FAE46}|Assembly-CSharp.csproj|c:\\users\\adamu\\documents\\github\\theunemployed\\assets\\scripts\\eyeslookatplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3BC4FAC-7512-EEDB-4ED0-B7FF136FAE46}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\eyeslookatplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3BC4FAC-7512-EEDB-4ED0-B7FF136FAE46}|Assembly-CSharp.csproj|C:\\Users\\adamu\\Documents\\GitHub\\TheUnemployed\\assets\\scripts\\playerweaponhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3BC4FAC-7512-EEDB-4ED0-B7FF136FAE46}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerweaponhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3BC4FAC-7512-EEDB-4ED0-B7FF136FAE46}|Assembly-CSharp.csproj|C:\\Users\\adamu\\Documents\\GitHub\\TheUnemployed\\assets\\scripts\\simplegun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3BC4FAC-7512-EEDB-4ED0-B7FF136FAE46}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\simplegun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3BC4FAC-7512-EEDB-4ED0-B7FF136FAE46}|Assembly-CSharp.csproj|C:\\Users\\adamu\\Documents\\GitHub\\TheUnemployed\\assets\\scripts\\fpscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3BC4FAC-7512-EEDB-4ED0-B7FF136FAE46}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fpscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EyesLookAtPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\adamu\\Documents\\GitHub\\TheUnemployed\\Assets\\Scripts\\EyesLookAtPlayer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\EyesLookAtPlayer.cs",
+              "ToolTip": "C:\\Users\\adamu\\Documents\\GitHub\\TheUnemployed\\Assets\\Scripts\\EyesLookAtPlayer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\EyesLookAtPlayer.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAwCYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T12:00:25.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerWeaponHandler.cs",
+              "DocumentMoniker": "C:\\Users\\adamu\\Documents\\GitHub\\TheUnemployed\\Assets\\Scripts\\PlayerWeaponHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerWeaponHandler.cs",
+              "ToolTip": "C:\\Users\\adamu\\Documents\\GitHub\\TheUnemployed\\Assets\\Scripts\\PlayerWeaponHandler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerWeaponHandler.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAkwG4AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T11:25:49.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SimpleGun.cs",
+              "DocumentMoniker": "C:\\Users\\adamu\\Documents\\GitHub\\TheUnemployed\\Assets\\Scripts\\SimpleGun.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SimpleGun.cs",
+              "ToolTip": "C:\\Users\\adamu\\Documents\\GitHub\\TheUnemployed\\Assets\\Scripts\\SimpleGun.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SimpleGun.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwCwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T11:15:12.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FPSController.cs",
+              "DocumentMoniker": "C:\\Users\\adamu\\Documents\\GitHub\\TheUnemployed\\Assets\\Scripts\\FPSController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FPSController.cs",
+              "ToolTip": "C:\\Users\\adamu\\Documents\\GitHub\\TheUnemployed\\Assets\\Scripts\\FPSController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FPSController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T15:09:36.326Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
